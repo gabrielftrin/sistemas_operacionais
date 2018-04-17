@@ -42,6 +42,7 @@ int main ( ) {
             case 2:
                 printf("Você escolheu o SJF!!\n");
                 menorexec = processos[0];
+                int j;
                 for (i=1;i<= qtde-1;)
                 {
                     for (j=(i+1);j > qtde ;j++)
@@ -54,13 +55,9 @@ int main ( ) {
                         {
                             menorexec = processos[i];
                         }
-
-
-
-
-
-
-
+                    }
+                }
+                /*
                 menorexec=processos[0];
                 int cont=0;
                 for (i=1;i<5;i++)
@@ -83,7 +80,7 @@ int main ( ) {
                         cont++;
                         }
                 }
-
+                */
                 printf("MENOR TEMPO EXEC PROCESSO %d\n\n\n", menorexec);
 
                 printf("Tempo médio de resposta do processo A: %d.\n", turna);
