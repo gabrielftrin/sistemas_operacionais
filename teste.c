@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 int main ( ) {
     printf("Digite o tempo de execução dos 4 processos, respectivamente.\n");
@@ -7,10 +8,11 @@ int main ( ) {
     int i = 1;
     int a,b,c,d,tempo,turna, turnb, turnc,turnd, menorexec;
     int processos[5];
+    int turnaround;
     /* for (contador,condição,(caso afirmativo, continua),incrementação)
     {..código...} */
     scanf("%d", &processos[0]);
-    printf("Você digitou %d \n", processos[0]);
+    printf("Voce digitou %d \n", processos[0]);
     scanf("%d", &processos[1]);
     printf("Você digitou %d \n", processos[1]);
     scanf("%d", &processos[2]);
@@ -37,8 +39,12 @@ int main ( ) {
                 printf("Tempo médio de resposta do processo A: %d.\n", turna);
                 printf("Tempo médio de resposta do processo B: %d.\n", turnb);
                 printf("Tempo médio de resposta do processo C: %d.\n", turnc);
-                printf("Tempo médio de resposta do processo D: %d.\n", turnd);
+                printf("Tempo médio de resposta do processo D: %d.\n\n", turnd);
+                
+                turnaround = (turna + turnb + turnc + turnd)/4;
+                printf("Turnaround: %d.\n", turnaround);
                 break;
+            
             case 2:
                 printf("Você escolheu o SJF!!\n");
                 menorexec = processos[0];
@@ -86,7 +92,10 @@ int main ( ) {
                 printf("Tempo médio de resposta do processo A: %d.\n", turna);
                 printf("Tempo médio de resposta do processo B: %d.\n", turnb);
                 printf("Tempo médio de resposta do processo C: %d.\n", turnc);
-                printf("Tempo médio de resposta do processo D: %d.\n", turnd);
+                printf("Tempo médio de resposta do processo D: %d.\n\n", turnd);
+                
+                turnaround = (turna + turnb + turnc + turnd)/4;
+                printf("Turnaround: %d.\n", turnaround);
                 break;
             case 3:
                 printf("Você escolheu o Round Robin!!\n");
@@ -96,5 +105,7 @@ int main ( ) {
                 break;
             default:
                 printf("Programa encerrado.\n");
+                
     }
+    system("pause");
 }
