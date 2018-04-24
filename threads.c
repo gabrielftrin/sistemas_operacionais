@@ -23,5 +23,6 @@ int main (int argc, char *argv[]) {
 		}
 	}
 	/* Last thing that main () should do */
-pthread_exit (NULL);
+	/* Para compilar este arquivo é necessário colocar no final da linha de compilação "-ptheads"
+pthread_exit (NULL); */
 } 
